@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Formulario de Cadastro</title>
+  <!-- Meta-Tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+ <!--  <meta name="keywords" content="Company Shipping Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements"/>-->
+  <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+
+  <script>
+    addEventListener("load", function () {
+      setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+      window.scrollTo(0, 1);
+    }
+  </script>  
+  <link href="{% static 'css/style2.css' %}" rel='stylesheet' type='text/css' />
+  <link href="{% static 'css/formulario.css' %}" rel='stylesheet' type='text/css' />  
+  <link href="//fonts.googleapis.com/css?family=Abhaya+Libre:400,500,600,700,800" rel="stylesheet">
+ 
+</head>
+
+<body>   
+  <br>
+  <br>
+  <br>
+  <h2>Formulário de Cadastro</h2>
+<div class="container">
+   
+    <form action="." method="POST">
+        {% csrf_token %}
+        <label for="{{ form.nome.id_for_label }}">Nome: </label>
+        {{ form.nome }}
+
+        <label for="{{ form.celular.id_for_label }}">Celular: </label>
+        {{ form.celular }}                   
+        
+        <label for="{{ form.mensagem.id_for_label }}">Mensagem: </label>
+        {{ form.mensagem }}
+        
+        <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+
+
+  <div class="copy-wthree">
+    <p>© 2024 All rights reserved | Desenvolvido por 
+      <a href="http://w3layouts.com/" target="_blank">Fabiano Freitas</a>
+    </p>
+  </div>
+</body>
+<!-- //Body -->
+
+</html>
